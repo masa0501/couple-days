@@ -1,0 +1,5 @@
+<%= link_to "投稿する", new_album_path, class: "post" %>
+ <% @albums.each do |album| %>
+    <%= image_tag album.image %>
+    <%= album.name%>
+  <%end%>
