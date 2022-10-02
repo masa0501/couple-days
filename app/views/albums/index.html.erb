@@ -1,5 +1,5 @@
 <%= link_to "投稿する", new_album_path, class: "post" %>
  <% @albums.each do |album| %>
-    <%= image_tag album.image %>
+    <%= image_tag album.image.variant(resize: '500x500') %>
     <%= album.name%>
   <%end%>
