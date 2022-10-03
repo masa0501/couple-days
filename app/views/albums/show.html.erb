@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+
+<%#アルバムの詳細%>
+<div class="album-show">
+  <div class ="album-name">
+    <%=@album.name%>
+  </div>
+      <%= image_tag @album.image.variant(resize: '500x500') %>
+</div>

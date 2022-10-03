@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
-  <%= link_to "アルバム作成", new_album_path, class: "post" %>
   <% @albums.each do |album| %>
+    <%= link_to  album_path( album.id) do %>
       <%= image_tag album.image.variant(resize: '500x500') %>
-      <%= album.name%>
     <%end%>
+  <%end%>
