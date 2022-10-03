@@ -21,6 +21,21 @@ class AlbumsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    @album = Album.find(params[:id])
+  end
+
+  def update
+    @album = Album.find(params[:id])
+    if @album.update(album_params)
+      redirect_to album_path(@album.id)
+    else
+      render :edit
+    end
+  end
+
+
+
 
 
 private
