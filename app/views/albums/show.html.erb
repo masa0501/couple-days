@@ -4,7 +4,7 @@
 <div class="album-show">
   <div class ="album-name">
     <%=@album.name%>
-
+    <%=link_to "削除", album_path(@album.id), method: :delete, class: "album-destroy"%>
 
   </div>
       <%= image_tag @album.image.variant(resize: '500x500') %>
