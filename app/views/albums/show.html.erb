@@ -5,7 +5,7 @@
   <div class ="album-name">
     <%=@album.name%>
     <%=link_to "削除", album_path(@album.id), method: :delete, class: "album-destroy"%>
-
+    <%=link_to "編集", edit_album_path(@album.id),method: :get, class: "album-edit"%>
   </div>
       <%= image_tag @album.image.variant(resize: '500x500') %>
 </div>
