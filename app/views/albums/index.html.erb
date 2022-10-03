@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
   <% @albums.each do |album| %>
     <%= link_to  album_path( album.id) do %>
-      <%= image_tag album.image.variant(resize: '500x500') %>
+      <%= image_tag album.image %>
     <%end%>
   <%end%>
