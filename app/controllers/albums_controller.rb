@@ -10,7 +10,7 @@ class AlbumsController < ApplicationController
   def create
     Album.create(album_params)
   end
-  
+
   def show
     @album = Album.find(params[:id])
   end
@@ -34,14 +34,9 @@ class AlbumsController < ApplicationController
     end
   end
 
-
-
-
-
-private
+  private
 
   def album_params
     params.require(:album).permit(:name, :image)
   end
-
 end
