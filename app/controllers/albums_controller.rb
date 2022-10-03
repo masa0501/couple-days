@@ -11,6 +11,9 @@ class AlbumsController < ApplicationController
     Album.create(album_params)
   end
   
+  def show
+    @album = Album.find(params[:id])
+  end
 
 
 
