@@ -2,10 +2,14 @@
 <div class="contents row">
   <div class="container">
     <h3>投稿する</h3>
-    <%= form_with model: @album, id: 'new_post', local: true do |f| %>
+    <%= form_with model: @album, id: 'new_album', local: true do |f| %>
       <%= f.text_field :name, placeholder: "アルバム名" %>
-       <div id="previews"></div>
-       <%= f.file_field :image, id:"album-image" %>
+      <div class="image-field">
+        <div id="previews"></div>
+        <div class="click-upload">
+        <%= f.file_field :images, name: 'album[images][]', data: {index: 0} %>
+        </div>
+      </div>
       <%= f.submit "SEND" %>
     <% end %>
   </div>

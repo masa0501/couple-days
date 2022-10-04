@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
   <% @albums.each do |album| %>
     <%= link_to  album_path( album.id) do %>
-      <%= image_tag album.image %>
+      <%= image_tag album.images[0] %>
     <%end%>
   <%end%>
