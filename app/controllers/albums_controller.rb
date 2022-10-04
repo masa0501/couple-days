@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  before_action :set_album, only: [:show, :edit, :update, :destroy]
+
   def index
     @albums = Album.all
   end
@@ -12,21 +14,12 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
-  end
-
-  def destroy
-    @album = Album.find(params[:id])
-    @album.destroy
-    redirect_to root_path
   end
 
   def edit
-    @album = Album.find(params[:id])
   end
 
   def update
-    @album = Album.find(params[:id])
     if @album.update(album_params)
       redirect_to album_path(@album.id)
     else
@@ -34,9 +27,18 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def destroy
+    @album.destroy
+    redirect_to root_path
+  end
+
   private
 
   def album_params
-    params.require(:album).permit(:name, {images: []})
+    params.require(:album).permit(:name, { images: [] })
+  end
+
+  def set_album
+    @album = Album.find(params[:id])
   end
 end
