@@ -10,7 +10,12 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    Album.create(album_params)
+    @album = Album.new(album_params)
+    if @album.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
