@@ -4,13 +4,18 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+        <label class="form-text">自分のニックネーム</label>
         <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
       </div>
 
       <div class="field">
-        <%= f.label :partner_nickname %> <em>(6 characters maximum)</em><br />
+        <label class="form-text">パートナーのニックネーム</label>
         <%= f.text_field :partner_nickname, autofocus: true, maxlength: "6" %>
+      </div>
+
+      <div class="field">
+        <label class="form-text">付き合った日</label>
+        <%= f.date_select :dating_day, use_month_numbers: true,start_year: 1980, end_year: (Time.now.year), prompt:'--' %>
       </div>
 
       <div class="field">
