@@ -4,8 +4,10 @@
 <div class="album-show">
   <div class ="album-name">
     <%=@album.name%>
+    <% if user_signed_in? && current_user.id == @album.user_id %>
     <%=link_to "削除", album_path(@album.id), method: :delete, class: "album-destroy"%>
     <%=link_to "編集", edit_album_path(@album.id),method: :get, class: "album-edit"%>
+    <% end %>
   </div>
       <%= image_tag @album.images[0], class: "main-image" %><br>
   <div class="other-images">
