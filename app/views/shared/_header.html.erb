@@ -4,6 +4,7 @@
       <h1 class="couple_days-title"><a href="/">CoupleDays</a></h1>
     <% if user_signed_in? %>
       <li><%= current_user.nickname%>&<%=current_user.partner_nickname%></li>
+      <li><%= link_to 'カレンダー',  events_path, method: :get %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li> 
