@@ -1,9 +1,9 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_sign_up
 
   def index
-    @albums = Album.all
+    @albums = current_user.albums
   end
 
   def new
@@ -48,7 +48,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
+  def move_to_sign_up
+    redirect_to new_user_registration_path unless user_signed_in?
   end
 end

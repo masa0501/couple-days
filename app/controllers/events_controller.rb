@@ -1,8 +1,9 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
-    @events = Event.all
+    @events =current_user.events
     @event = Event.new
   end
 
@@ -41,4 +42,7 @@ class EventsController < ApplicationController
     @event=Event.find(params[:id])
   end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end
