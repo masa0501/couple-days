@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :albums
+  has_many :events
 
   validates :nickname, presence: true
   validates :partner_nickname, presence: true
