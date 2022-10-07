@@ -1,14 +1,5 @@
 <%= render "shared/header" %>
-<%= month_calendar events: @events do |date, events| %>
-  <%= date.day %>
-
-  <% events.each do |event| %>
-    <div>
-      <%= event.title %>
-    </div>
-  <% end %>
-<% end %>
-<%= form_with(model: @event, local: true) do |form| %>
+<%= form_with model: @event, url: events_path, local: true do |form| %>
 
   <div class="title">
     <%= form.label :title %>
@@ -31,3 +22,14 @@
   </div>
 
 <% end %>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.title %>
+    </div>
+  <% end %>
+<% end %>
+
