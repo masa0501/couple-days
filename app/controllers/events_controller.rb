@@ -3,11 +3,10 @@ class EventsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @events =current_user.events
+    @events = current_user.events
     @event = Event.new
   end
 
-  
   def create
     Event.create(event_params)
     redirect_to events_path
@@ -39,7 +38,7 @@ class EventsController < ApplicationController
   end
 
   def set_event
-    @event=Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def move_to_index
