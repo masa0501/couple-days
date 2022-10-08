@@ -2,8 +2,8 @@
 
 <%#アルバムの詳細%>
 <div class="album-show">
-  <div class ="album-name">
-    <%=@album.name%>
+  <div class ="album-title">
+    <%=@album.title%>
     <% if user_signed_in? && current_user.id == @album.user_id %>
     <%=link_to "削除", album_path(@album.id), method: :delete, class: "album-destroy"%>
     <%=link_to "編集", edit_album_path(@album.id),method: :get, class: "album-edit"%>

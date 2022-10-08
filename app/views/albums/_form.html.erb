@@ -3,7 +3,7 @@
   <div class="container">
     <h3>投稿する</h3>
     <%= form_with model: @album, id: 'new_album', local: true do |f| %>
-      <%= f.text_field :name, placeholder: "アルバム名" %>
+      <%= f.text_field :title, placeholder: "アルバム名" %>
       <div class="image-field">
         <div id="previews"></div>
         <div class="click-upload">

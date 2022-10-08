@@ -3,8 +3,8 @@
   <% @albums.each do |album| %>
     <%= link_to  album_path( album.id) do %>
       <%= image_tag album.images[0], class:"album-img"%>
-      <div class="album-name">
-        <%=album.name %>
+      <div class="album-title">
+        <%=album.title %>
       </div>
     <%end%>
   <%end%>
