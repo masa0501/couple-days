@@ -1,16 +1,15 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
   <div class="header_bar">
       <h1 class="couple_days-title"><a href="/">CoupleDays</a></h1>
     <% if user_signed_in? %>
-      <li><%= current_user.nickname%>&<%=current_user.partner_nickname%></li>
-      <li><%= link_to 'カレンダー',  events_path, method: :get %></li>
+      <div class="user-name"><%= current_user.nickname%>&<%=current_user.partner_nickname%></div>
+      <li><%= link_to 'カレンダー',  events_path, method: :get, class: "calender" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li> 
       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
     <% end %>
-      <a class="" href="/albums/new">アルバム作成</a>
+      <a class="new-album" href="/albums/new">アルバム作成</a>
     </div>
   </div>
 </header>

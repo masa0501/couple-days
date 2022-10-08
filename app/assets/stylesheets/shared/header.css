@@ -1,12 +1,45 @@
-
+.top-page-header{
+  width: 100vw;
+  background-color:#ffe8e8;
+}
 
 .header_bar{
   display: flex;
   justify-content:space-between;
   align-items: center;
-  background-color:yellowgreen
+  list-style-type: none;
 }
 
-.couple_days-title{
-  
+.couple_days-title a{
+  text-decoration: none;
+  color:#a37058;
+}
+
+.user-name{
+  font-size: 35px;
+}
+
+.calender{
+  text-decoration: none;
+  color:#a37058;
+}
+
+.login{
+  text-decoration: none;
+  color:#a37058;
+}
+
+.logout{
+  text-decoration: none;
+  color:#a37058;
+}
+
+.sign-up{
+  text-decoration: none;
+  color:#a37058;
+}
+
+.new-album{
+  text-decoration: none;
+  color:#a37058;
 }

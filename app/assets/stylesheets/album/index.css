@@ -1,0 +1,17 @@
+.album-main{
+  width: 100vw;
+  background-color: #fffddd;
+  
+}
+
+.album-img{
+  margin-left: 300px;
+  
+}
+
+.album-name{
+  text-align: center;
+  text-decoration: none;
+  color:#a37058;
+  font-size: 20px;
+}
