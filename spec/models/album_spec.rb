@@ -23,6 +23,11 @@ RSpec.describe Album, type: :model do
         @album.valid?
         expect(@album.errors.full_messages).to include("Images can't be blank")
       end
+      it 'userが紐付いていないと保存できない' do
+        @album.user = nil
+        @album.valid?
+        expect(@album.errors.full_messages).to include('User must exist')
+      end
     end
   end
 end
