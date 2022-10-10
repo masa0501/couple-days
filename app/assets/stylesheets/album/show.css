@@ -1,0 +1,34 @@
+.main{
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffddd;
+}
+
+.album-show{
+  background-color: #fffddd;
+  text-align: center;
+}
+
+.album-btn{
+  
+}
+
+.album-edit-btn{
+  text-align: center;
+  background-color: green;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 5px 0px;
+  padding: 5px 5px;
+}
+
+.album-destroy-btn{
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 5px 0px;
+  padding: 5px 5px;
+}

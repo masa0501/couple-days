@@ -1,17 +1,22 @@
+a {
+  text-decoration: none;
+}
+
+.main{
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffddd;
+}
+
+
 .album-main{
   width: 100vw;
   background-color: #fffddd;
-  
-}
-
-.album-img{
-  margin-left: 300px;
-  
-}
-
-.album-name{
   text-align: center;
-  text-decoration: none;
+}
+
+.album-title{
+  text-align: center;
   color:#a37058;
-  font-size: 20px;
+  font-size: 50px;
 }

@@ -8,17 +8,14 @@ img {
   display: flex;
 }
 
+.main-image {
+  height: 400px;
+  width: 400px;
+}
+
 .other-image {
   margin-right: 10px;
+  height: 300px;
+  width: 300px;
 }
 
-.image-delete-button {
-  text-align: center;
-  border: solid 1px;
-  cursor: pointer;
-}
-
-.main-image {
-  height: 200px;
-  width: 200px;
-}
