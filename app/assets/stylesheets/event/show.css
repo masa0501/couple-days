@@ -1,29 +1,31 @@
-.main{
+.event-show-main{
   height: 100vh;
   width: 100vw;
   background-color: #fffddd;
 }
 
-.album-show{
-  background-color: #fffddd;
-  text-align: center;
+.event-title{
+  font-size: 25px;
 }
 
+.event-content{
+  font-size: 15px;
+}
 
-.album-edit-btn{
+.event-edit-btn{
   text-align: center;
   background-color: green;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #FFF;
   margin: 5px 0px;
   padding: 5px 5px;
 }
 
-.album-destroy-btn{
+.event-destroy-btn{
   text-align: center;
   background-color: #ea352d;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #FFF;
   margin: 5px 0px;

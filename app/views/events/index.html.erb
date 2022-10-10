@@ -1,37 +1,39 @@
 <%= render "shared/header" %>
-<%= form_with model: @event, local: true do |form| %>
+<div class="event-main">
+  <%= form_with model: @event, local: true do |form| %>
 
   <div class="title">
-    <%= form.label :title %>
+    <label class="form-title">予定</label>
     <%= form.text_field :title %>
   </div>
 
-  <div class="time">
-    <%= form.label :start_time %>
+  <div class="start-time">
+    <label class="form-start-time">時間</label>
     <%= form.datetime_select :start_time %>
   </div>
 
   <div class="content">
-    <%= form.label :content %>
+    <label class="form-content">内容</label>
     <%= form.text_field :content %>
   </div>
 
 
-  <div class="submit">
-    <%= form.submit %>
-  </div>
 
-<% end %>
-
-<%= month_calendar events: @events do |date, events| %>
-  <%= date.day %>
-  <% events.each do |event| %>
-    <div>
-      <%= link_to  event_path( event.id) do %>
-      <%= event.title %>
-      <% end %>
+    <div class="submit">
+      <%= form.submit %>
     </div>
-  
-  <% end %>
-<% end %>
 
+  <% end %>
+  <div class="calender-main">
+    <%= month_calendar events: @events do |date, events| %>
+      <%= date.day %>
+      <% events.each do |event| %>
+        <div>
+          <%= link_to  event_path( event.id) do %>
+          <%= event.title %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

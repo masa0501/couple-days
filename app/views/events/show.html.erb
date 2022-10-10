@@ -1,5 +1,13 @@
 <%= render "shared/header" %>
-<%=@event.title%>
-<%=@event.content%>
-    <%=link_to "削除", event_path(@event.id), method: :delete, class: "event-destroy"%>
-    <%=link_to "編集", edit_event_path(@event.id),method: :get, class: "event-edit"%>
+<div class="event-show-main">
+  <div class="event-start-time">
+    <%=@event.start_time%>
+  </div>
+  <div class="event-title">
+    <%=@event.title%>
+  </div>
+  <div class="event-content">
+    <%=@event.content%>
+  </div>
+    <%=link_to "削除", event_path(@event.id), method: :delete, class: "event-destroy-btn"%>
+</div>
