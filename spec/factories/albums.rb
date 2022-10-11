@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :album do
-    title            {'タイトル'}
+    title { 'タイトル' }
 
     association :user
 

@@ -5,7 +5,6 @@ RSpec.describe Album, type: :model do
     @album = FactoryBot.build(:album)
   end
 
-
   describe 'albumの投稿が出来る時' do
     context '投稿出来る時' do
       it 'titleとimagesがあれば投稿出来る' do

@@ -4,7 +4,7 @@ class AlbumsController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy, :show]
 
   def index
-    @albums = current_user.albums.order("created_at DESC")
+    @albums = current_user.albums.order('created_at DESC')
   end
 
   def new
