@@ -12,3 +12,8 @@
   cursor: pointer;
   margin-bottom: 5px;
 }
+
+.preview-image{
+  height: 300px;
+  width: 200px;
+}

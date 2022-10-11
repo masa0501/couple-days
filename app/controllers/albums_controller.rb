@@ -1,9 +1,10 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
   before_action :move_to_sign_up
+  before_action :move_to_index, only: [:edit, :destroy, :show]
 
   def index
-    @albums = current_user.albums
+    @albums = current_user.albums.order("created_at DESC")
   end
 
   def new
@@ -50,5 +51,9 @@ class AlbumsController < ApplicationController
 
   def move_to_sign_up
     redirect_to new_user_registration_path unless user_signed_in?
+  end
+
+  def move_to_index
+    redirect_to action: :index unless @album.user == current_user
   end
 end

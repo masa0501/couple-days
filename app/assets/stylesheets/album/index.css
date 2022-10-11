@@ -16,7 +16,12 @@ a {
 }
 
 .album-title{
-  text-align: center;
   color:#a37058;
   font-size: 50px;
+
+}
+
+.user-dating-day{
+  font-size: 30px;
+  color:#a26346;
 }

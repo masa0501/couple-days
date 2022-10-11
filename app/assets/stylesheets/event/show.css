@@ -9,23 +9,14 @@
 }
 
 .event-content{
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.event-edit-btn{
-  text-align: center;
-  background-color: green;
-  font-size: 15px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 5px 0px;
-  padding: 5px 5px;
-}
 
 .event-destroy-btn{
   text-align: center;
   background-color: #ea352d;
-  font-size: 15px;
+  font-size: px;
   font-weight: bold;
   color: #FFF;
   margin: 5px 0px;

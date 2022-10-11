@@ -1,12 +1,16 @@
 <%= render "shared/header" %>
 <div class=main>
+  <div class="user-dating-day">お付き合い記念日<%=current_user.dating_day%></div>
   <div class=album-main>
     <% @albums.each do |album| %>
+      <div class="album-title">
+        <%=album.title %>
+      </div>
+      <div class="album-created-at">
+        <%=album.created_at%>
+      </div>
       <%= link_to  album_path( album.id) do %>
-        <div class="album-title">
-          <%=album.title %>
-        </div>
-        <%= image_tag album.images[0], class:"album-img"%>
+      <%= image_tag album.images[0], class:"album-img"%>
       <%end%>
     <%end%>
   </div>
