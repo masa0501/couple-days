@@ -6,16 +6,22 @@ Couple-Days
 https://couple-days.herokuapp.com/
 # テスト用アカウント
 ・Basic認証パスワード :admin
+
 ・Basic認証ID :2222
+
 ・メールアドレス :test@mail
+
 ・パスワード :test01
 # 利用方法
 # アルバム投稿
 1 ユーザーの新規登録を行う
+
 2 ヘッダーの新規投稿から、アルバムの内容(タイトル・画像1~5枚)を入力して投稿する
+
 3 一覧ページにアルバムが表示される
 # カレンダーに予定を記入する
 1 カレンダーのフォームから予定の内容(タイトル・詳細)を入力して投稿
+
 2 カレンダー内に予定が表示される
 # アプリケーションを作成した背景
 パートナーとの思い出の写真と記念日や予定を一緒に管理できるアプリがあれば、過去の投稿を元に次のデートプランやプレゼントを考える材料になるのではと考えた為、このアプリを作成した。
@@ -39,14 +45,20 @@ https://docs.google.com/spreadsheets/d/1jVk97mWtZ0mwfNbQeMhUWZI-D6QP9RT4wizKJslQ
 [![Image from Gyazo](https://i.gyazo.com/0e6cbc954caae14ff90e5faedd98cae0.png)](https://gyazo.com/0e6cbc954caae14ff90e5faedd98cae0)
 # 開発環境
 ・フロントエンド HTML, CSS, JavaScript
+
 ・バックエンド Ruby, Ruby on rails
+
 ・インフラ MySQL, AWS
+
 ・タスク管理 git, github
 # ローカルでの動作方法
 以下のコマンドを順に実行
 % git clone https://github.com/masa0501/couple-days.git
+
 % cd couple-days
+
 % bundle install
+
 % yarn install
 # 工夫したポイント
 アルバム一覧の左上に付き合った記念日を表示することでカップル向けアプリとしての印象を強めた
